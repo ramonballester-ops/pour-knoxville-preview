@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knoxville - Pour Taproom</title>
+<meta name="description" content="Pour Taproom Knoxville — 68 self-pour taps in the Old City. Craft beer, wine, cider &amp; seltzer by the ounce. Under new local ownership.">
+<link rel="icon" href="images/cropped-Logo_red-01.png">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* Knoxville page additions */
+.kx-subnav{background:var(--ink-soft);border-bottom:3px solid var(--red)}
+.kx-subnav .inner{max-width:1100px;margin:0 auto;padding:10px 24px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kx-subnav a{color:#e9e9f2;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18)}
+.kx-subnav a:hover{color:var(--gold);border-color:var(--gold)}
+.pour-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:28px}
+.pour-item{background:var(--ink-soft);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px}
+.pour-item b{display:block;font-size:15px;color:#fff}
+.pour-item span{font-size:13px;color:#c5c1b4}
+.pour-item .abv{float:right;color:var(--gold);font-weight:800;font-size:13px}
+.brew-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.brew-chips span{background:rgba(232,163,61,.12);border:1px solid rgba(232,163,61,.4);color:var(--gold);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700}
+.menu-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:0 4px 18px rgba(26,26,46,.07)}
+.menu-card h3{font-size:16px;letter-spacing:2px;text-transform:uppercase;color:var(--red);border-bottom:2px solid var(--cream-dark);padding-bottom:10px}
+.menu-card ul{list-style:none;margin-top:14px}
+.menu-card li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed #efe9dc;font-size:15px}
+.menu-card li:last-child{border-bottom:none}
+.menu-card li em{font-style:normal;color:#7a7a8e;font-size:13px;display:block}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:34px}
+/* Calendar */
+.cal-wrap{background:#fff;border-radius:var(--radius);box-shadow:0 4px 18px rgba(26,26,46,.07);overflow:hidden;margin-top:34px}
+.cal-head{background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:16px 22px}
+.cal-head h3{font-size:20px;letter-spacing:1px;text-transform:uppercase}
+.cal-head button{background:var(--red);border:0;color:#fff;font-size:18px;font-weight:900;width:38px;height:38px;border-radius:999px;cursor:pointer}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.cal-dow{background:var(--cream-dark);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;text-align:center;padding:10px 4px;color:#6b6554}
+.cal-cell{min-height:92px;border-top:1px solid #efe9dc;border-left:1px solid #efe9dc;padding:6px;font-size:13px;position:relative}
+.cal-cell .d{font-weight:800;color:#8b8474;font-size:12px}
+.cal-cell.today{background:#fdf3e2}
+.cal-cell.today .d{color:var(--red)}
+.cal-ev{display:block;margin-top:4px;background:var(--ink);color:var(--gold);border-radius:6px;padding:3px 7px;font-size:11px;font-weight:700;line-height:1.35}
+.cal-ev.red{background:var(--red);color:#fff}
+.cal-ev.gold{background:var(--gold);color:#2b1d02}
+@media(max-width:700px){.cal-cell{min-height:64px;font-size:10px}.cal-ev{font-size:9px;padding:2px 4px}}
+/* Instagram */
+.ig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:34px;justify-items:center}
+.ig-grid blockquote{margin:0 !important;min-width:0 !important;max-width:100% !important}
+</style>
+</head>
+<body>
+<div class="preview-banner">DRAFT PREVIEW for John &amp; Laura — menu items, prices &amp; dated events are placeholders. Feedback welcome!</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://pourtaproom.com/"><img src="images/PTRLogo-copy.png" alt="Pour Taproom" style="height:60px"></a>
+    <label for="navtoggle" class="nav-burger" aria-label="Menu">&#9776;</label>
+    <input type="checkbox" id="navtoggle">
+    <div class="nav-links">
+      <a href="https://pourtaproom.com/">Home</a>
+      <div class="dd"><a href="https://pourtaproom.com/locations/">Locations</a>
+        <div class="dd-menu">
+          <a href="https://pourtaproomatlanta.com/" target="_blank" rel="noopener">Atlanta</a>
+          <a href="https://pourtaproomcharleston.com/" target="_blank" rel="noopener">Charleston</a>
+          <a href="https://www.pourtaproomdurham.com/" target="_blank" rel="noopener">Durham</a>
+          <a href="https://pourtaproomellicottville.godaddysites.com/" target="_blank" rel="noopener">Ellicottville</a>
+          <a href="https://jaxpourtaproom.com/" target="_blank" rel="noopener">Jacksonville</a>
+          <a href="./">Knoxville</a>
+        </div>
+      </div>
+      <a href="https://pourtaproom.com/about/">About</a>
+      <a href="https://pourtaproom.com/events/">Events</a>
+      <a href="https://pourtaproom.com/video/">Video</a>
+      <a href="https://pourtaproom.com/contact/">Contact</a>
+    </div>
+    <a class="nav-cta" href="private-events/">Book an Event</a>
+  </div>
+</nav>
+
+<div class="kx-subnav">
+  <div class="inner">
+    <a href="#taps">Tap Wall</a>
+    <a href="#menu">Food</a>
+    <a href="#calendar">Event Calendar</a>
+    <a href="#instagram">Instagram</a>
+    <a href="#visit">Hours &amp; Directions</a>
+    <a href="private-events/">Private Events</a>
+    <a href="about/">Meet the Owners</a>
+  </div>
+</div>
+
+<div class="page-hero" style="background:linear-gradient(rgba(18,14,24,.74),rgba(26,26,46,.84)),url(/images/knoxville-taproom.jpg) center 62%/cover no-repeat;padding-bottom:84px">
+  <span class="kicker" style="color:var(--gold)">Knoxville, TN &middot; The Old City</span>
+  <h1>Pour Taproom <em>Knoxville</em></h1>
+  <p>68 self-serve taps of craft beer, wine, cider &amp; seltzer in the heart of Knoxville's historic Old City. Pour as much or as little as you like — and only pay for what you pour.</p>
+  <div class="hero" style="padding:0;max-width:none">
+    <div class="stats" style="margin:30px 0 6px">
+      <div class="stat"><b>68</b><span>Rotating Taps</span></div>
+      <div class="stat"><b>&frac12;oz</b><span>Pour Anything, Taste Everything</span></div>
+      <div class="stat"><b>2017</b><span>Knoxville's Original Self-Pour Bar</span></div>
+      <div class="stat"><b>🇺🇸</b><span>Veteran-Owned</span></div>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a class="btn btn-red" href="private-events/">Book a Private Event</a>
+    <a class="btn btn-gold" href="#calendar">What's Happening</a>
+    <a class="btn btn-ghost" href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener">@pourtaproomknoxville</a>
+  </div>
+</div>
+
+<a href="about/" style="display:block;background:linear-gradient(90deg,#cc3337,#8e1a1e);color:#fff;text-decoration:none"><div style="max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;text-align:center"><span style="font-size:24px">🇺🇸</span><span style="font-weight:800;letter-spacing:1px">UNDER NEW LOCAL OWNERSHIP — meet John &amp; Laura Rogers, Knoxville's newest neighbors</span><span style="border:2px solid rgba(255,255,255,.7);border-radius:999px;padding:6px 16px;font-size:13px;font-weight:800">Our Story &rarr;</span></div></a>
+
+<section class="section" id="how">
+  <span class="kicker">How It Works</span>
+  <h2>Be your own bartender</h2>
+  <div class="steps">
+    <div class="step"><div class="num">STEP 01</div><h3>Check in</h3><p>Grab a pour wristband at the front — it keeps a tab of everything you pour, so there's no waiting on a bartender all night.</p></div>
+    <div class="step"><div class="num">STEP 02</div><h3>Tap &amp; pour</h3><p>Walk the wall, tap your wristband on anything that looks good, and pour your own — a two-ounce taste or a full glass. Every tap shows what's flowing, its style and ABV.</p></div>
+    <div class="step"><div class="num">STEP 03</div><h3>Pay by the ounce</h3><p>You're only charged for exactly what you pour. Sample your way across Tennessee craft without committing to a single pint.</p></div>
+  </div>
+</section>
+
+<div class="dark-band">
+  <section class="section" id="taps">
+    <span class="kicker" style="color:var(--gold)">The Tap Wall</span>
+    <h2>68 taps, always rotating</h2>
+    <p style="color:#c5c1b4;max-width:680px;margin-top:10px">Local East Tennessee breweries pour right next to Nashville favorites, Southeast craft and legendary Belgian imports — plus wine, cider and hard seltzer. The wall changes constantly, so there's always a reason to come back.</p>
+    <div class="tap-grid">
+      <div class="tap-card"><b>68</b><h4>Digital Taps</h4><p>Beer, wine, cider &amp; seltzer — every tap screen shows the pour, the brewery and the price per ounce.</p></div>
+      <div class="tap-card"><b>TN</b><h4>Local First</h4><p>East Tennessee and Nashville craft always has a home on our wall — from Norris to Townsend to Music City.</p></div>
+      <div class="tap-card"><b>🥂</b><h4>Wine &amp; Bubbles</h4><p>Reds, whites and sparkling on tap — the mimosa bar runs every weekend.</p></div>
+      <div class="tap-card"><b>High-Grav</b><h4>Big Pours</h4><p>Imperial stouts, Belgian quads and other high-gravity rarities you won't find pouring anywhere else downtown.</p></div>
+    </div>
+    <!-- LIVE TAP LIST SLOT ================================================
+         The Atlanta site shows a live, always-current tap list by embedding
+         iPourIt's "on tap" iframe (Beltline example):
+           <iframe src="https://ipourit.com/ontapiframe?barid=386&wrapper=true"
+                   style="width:100%;height:480px;border:0;background:#fff"
+                   loading="lazy" title="Live tap list"></iframe>
+         Knoxville runs a digital tap system but its public embed is not
+         enabled (confirmed: no Knoxville venue exists on this endpoint).
+         ACTION for John & Laura: ask iPourIt support (ipouritinc.com) for
+         the venue's "on tap iframe" link / bar id, then replace the static
+         "Recently on the wall" grid below with the iframe above.
+         ================================================================= -->
+    <h3 style="margin-top:44px;font-size:20px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)">Recently on the wall</h3>
+    <div class="pour-list">
+      <div class="pour-item"><b>LiL SLURP <span class="abv">Hazy IPA</span></b><span>NoDa Brewing Co. &middot; Charlotte, NC</span></div>
+      <div class="pour-item"><b>Back Seat IPA <span class="abv">IPA</span></b><span>Half Batch Brewing &middot; Hendersonville, TN</span></div>
+      <div class="pour-item"><b>Chimay Grande R&eacute;serve <span class="abv">9.0%</span></b><span>Bi&egrave;res de Chimay &middot; Belgium</span></div>
+      <div class="pour-item"><b>Ten FIDY <span class="abv">10.5%</span></b><span>Oskar Blues &middot; Imperial Stout</span></div>
+      <div class="pour-item"><b>Maduro Brown Ale <span class="abv">Brown</span></b><span>Cigar City Brewing &middot; Tampa, FL</span></div>
+      <div class="pour-item"><b>60 Minute IPA <span class="abv">6.0%</span></b><span>Dogfish Head &middot; IPA</span></div>
+      <div class="pour-item"><b>Franco's Mexican Lager <span class="abv">Lager</span></b><span>Clinch River Brewing &middot; Norris, TN</span></div>
+      <div class="pour-item"><b>Hippies &amp; Cowboys <span class="abv">IPA</span></b><span>Tennessee Brew Works &middot; Nashville</span></div>
+      <div class="pour-item"><b>Queen Bee <span class="abv">Sour</span></b><span>Bearded Iris Brewing &middot; Nashville</span></div>
+    </div>
+    <p style="font-size:13px;color:#8d889c;margin-top:14px">A taste of recent pours — the wall rotates daily. Follow <a href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener" style="color:var(--gold)">@pourtaproomknoxville</a> for what's tapping this week.</p>
+    <h3 style="margin-top:36px;font-size:16px;letter-spacing:2px;text-transform:uppercase">Pouring our neighbors</h3>
+    <div class="brew-chips">
+      <span>Clinch River &middot; Norris</span>
+      <span>Peaceful Side &middot; Townsend</span>
+      <span>Half Batch &middot; Hendersonville</span>
+      <span>Tennessee Brew Works</span>
+      <span>Black Abbey</span>
+      <span>Bearded Iris</span>
+      <span>Yazoo</span>
+      <span>Music City Brewing</span>
+    </div>
+  </section>
+</div>
+
+<section class="section" id="menu">
+  <span class="kicker">The Kitchen</span>
+  <h2>Food worth staying for</h2>
+  <p style="color:#5a5a6e;max-width:640px;margin-top:10px">Shareables, stacked focaccia sandwiches and loaded nachos — built to go with whatever you're pouring. <em>(Sample menu — items and prices change seasonally.)</em></p>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>Apps &amp; Dips</h3>
+      <ul>
+        <li><span>Giant Bavarian Pretzel<em>beer cheese &amp; stone-ground mustard</em></span><span>12</span></li>
+        <li><span>Loaded Nachos<em>queso, pico, jalape&ntilde;o — add pulled pork or chicken</em></span><span>13</span></li>
+        <li><span>Spinach &amp; Artichoke Dip<em>toasted focaccia points</em></span><span>11</span></li>
+        <li><span>Chips &amp; Beer Cheese<em>house kettle chips</em></span><span>8</span></li>
+        <li><span>Charcuterie Board<em>meats, cheeses, pickled things — built for the table</em></span><span>18</span></li>
+      </ul>
+    </div>
+    <div class="menu-card">
+      <h3>Sammiches</h3>
+      <ul>
+        <li><span>The Old City Club<em>turkey, bacon, avocado on toasted focaccia</em></span><span>13</span></li>
+        <li><span>Smoked Pulled Pork<em>house slaw &amp; sweet heat BBQ</em></span><span>12</span></li>
+        <li><span>Caprese Focaccia<em>fresh mozzarella, tomato, basil, balsamic</em></span><span>11</span></li>
+        <li><span>Italian Stack<em>salami, ham, provolone, banana peppers</em></span><span>13</span></li>
+        <li><span>Grown-Up Grilled Cheese<em>three cheeses + tomato jam</em></span><span>10</span></li>
+      </ul>
+    </div>
+    <div class="menu-card">
+      <h3>Weekly Specials</h3>
+      <ul>
+        <li><span>🥂 Mimosa Bar<em>half-off sparkling wine — Sat &amp; Sun 12–5, all day Monday</em></span><span></span></li>
+        <li><span>🧠 Trivia Tuesday<em>free to play &middot; 8:00 pm &middot; prizes for the podium</em></span><span></span></li>
+        <li><span>🍷 Wine Down Wednesday<em>half off every wine tap, all day</em></span><span></span></li>
+        <li><span>🇺🇸 Military Appreciation<em>honoring those who serve — see the calendar</em></span><span></span></li>
+      </ul>
+      <p style="margin-top:16px"><a href="images/knoxville-menu.png" target="_blank" rel="noopener" style="color:var(--red);font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none">See the full menu &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="dark-band">
+  <section class="section" id="events">
+    <span class="kicker" style="color:var(--gold)">Always Something On</span>
+    <h2>This is your neighborhood taproom</h2>
+    <div class="event-cards">
+      <div class="event-card ec-5k" style="min-height:250px"><span class="tag">Signature</span><h3>🇺🇸 Military Appreciation Day</h3><p>Honoring active duty, veterans and first responders — special pours, giveaways and community partners. First one announced soon.</p></div>
+      <div class="event-card ec-trivia"><span class="tag">Weekly</span><h3>Trivia Tuesday</h3><p>Every Tuesday at 8pm. Free to play, teams welcome, bragging rights and prizes on the line.</p></div>
+      <div class="event-card ec-live"><span class="tag">Game Day</span><h3>Vols Watch Parties</h3><p>Minutes from Neyland Stadium — pour your pregame, watch every down, and let someone else fight the parking.</p></div>
+    </div>
+  </section>
+</div>
+
+<section class="section" id="calendar">
+  <span class="kicker">Event Calendar</span>
+  <h2>What's happening this month</h2>
+  <div class="cal-wrap">
+    <div class="cal-head">
+      <button id="cal-prev" aria-label="Previous month">&lsaquo;</button>
+      <h3 id="cal-title">Month</h3>
+      <button id="cal-next" aria-label="Next month">&rsaquo;</button>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+  </div>
+  <p style="font-size:13px;color:#8b8474;margin-top:12px">Private events may adjust public hours — check <a href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener" style="color:var(--red);font-weight:700">Instagram</a> for the latest.</p>
+</section>
+
+<section class="section" id="instagram" style="padding-top:20px">
+  <span class="kicker">On the Gram</span>
+  <h2>Lately at Pour Knoxville</h2>
+  <div class="ig-grid">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DfCfC1uEeIw/" data-instgrm-version="14"></blockquote>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dejs-nOkSBv/" data-instgrm-version="14"></blockquote>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeMdqXVkWGX/" data-instgrm-version="14"></blockquote>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dd_s308l4uX/" data-instgrm-version="14"></blockquote>
+  </div>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <p style="text-align:center;margin-top:22px"><a class="btn btn-dark" href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener">Follow @pourtaproomknoxville</a></p>
+</section>
+
+<section class="section" id="visit" style="padding-top:28px">
+  <span class="kicker">Plan Your Visit</span>
+  <h2>Hours &amp; getting here</h2>
+  <div class="visit" style="margin-top:26px">
+    <div>
+      <h3 style="font-size:18px">&#128205; 207 West Jackson Ave, Knoxville, TN 37902</h3>
+      <p style="font-size:14px;color:#5a5a6e;margin-top:6px">In the historic Jackson Terminal, in the heart of the Old City — steps from the Smokies ballpark and a short walk from Gay Street and Market Square.</p>
+      <table class="hours-table">
+        <tr><td>Monday &ndash; Thursday</td><td>12:00 pm &ndash; 12:00 am</td></tr>
+        <tr><td>Friday &amp; Saturday</td><td>12:00 pm &ndash; 1:00 am</td></tr>
+        <tr><td>Sunday</td><td>12:00 pm &ndash; 12:00 am</td></tr>
+      </table>
+      <iframe src="https://maps.google.com/maps?q=Pour%20Taproom%20207%20West%20Jackson%20Ave%20Knoxville%20TN&output=embed" style="width:100%;height:260px;border:0;border-radius:14px;margin-top:16px" loading="lazy" title="Map to Pour Taproom Knoxville"></iframe>
+    </div>
+    <div>
+      <h3 style="font-size:18px">&#128663; Parking &amp; good to know</h3>
+      <div class="parking">
+        <ul>
+          <li><b>Street parking</b> along Jackson Ave and throughout the Old City — free evenings &amp; weekends.</li>
+          <li><b>Old City / Jackson Ave garages</b> within a two-block walk.</li>
+          <li><b>Rideshare drop-off:</b> right out front on West Jackson Ave.</li>
+          <li><b>Covered boardwalk patio</b> + indoor seating — board games and darts inside, dogs welcome on the patio.</li>
+          <li><b>Smokies game day?</b> The ballpark is right up Jackson Ave — pour your pregame and walk over.</li>
+        </ul>
+      </div>
+      <div class="photo-slot" style="margin-top:18px">PHOTO SLOT — drop in a great shot of the tap wall or patio here<br>(e.g. from @pourtaproomknoxville)</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:10px">
+  <div class="strip">
+    <a href="private-events/"><div class="emoji">🎉</div><h4>Private Events</h4><p>Birthdays, corporate nights, rehearsal dinners — take over a section or the whole taproom.</p><span class="go">Start Planning &rarr;</span></a>
+    <a href="about/"><div class="emoji">🤝</div><h4>Meet John &amp; Laura</h4><p>New owners, new neighbors — and a new chapter for the Old City's favorite tap wall.</p><span class="go">Our Story &rarr;</span></a>
+    <a href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener"><div class="emoji">📸</div><h4>Follow Along</h4><p>Fresh taps, weekly specials and event announcements, straight from the taproom.</p><span class="go">@pourtaproomknoxville &rarr;</span></a>
+  </div>
+</section>
+
+<a class="home-fab" href="https://pourtaproom.com/" aria-label="Back to the Pour Taproom master page">
+  <img src="images/PTRLogo-copy.png" alt="Pour Taproom logo">
+  <span>Back to Pour</span>
+</a>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <img src="images/PTRLogo-copy.png" alt="Pour Taproom" style="height:96px;margin-bottom:12px">
+      <h5 style="margin-top:4px">Pour Taproom Knoxville</h5>
+      <p style="font-size:14px;line-height:1.7">207 West Jackson Ave<br>Knoxville, TN 37902<br>knoxville@pourtaproom.com</p>
+    </div>
+    <div>
+      <h5>Knoxville</h5>
+      <a href="./">Taproom Home</a>
+      <a href="private-events/">Private Events</a>
+      <a href="about/">About the Owners</a>
+      <a href="./#calendar">Event Calendar</a>
+      <a href="./#menu">Food Menu</a>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <a href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener">Instagram — @pourtaproomknoxville</a>
+      <a href="https://pourtaproom.com/">Pour Taproom National</a>
+      <a href="https://pourtaproom.com/locations/">All Locations</a>
+      <a href="https://pourtaproom.com/contact/">Franchising Opportunities</a>
+    </div>
+  </div>
+  <div class="legal">
+    <span>&copy; 2026 Pour Taproom Knoxville. All rights reserved. Pour responsibly.</span>
+  </div>
+</footer>
+
+<script>
+/* ===== EVENT CALENDAR =====
+   Edit the two lists below to manage the calendar.
+   recurring: weekday 0=Sun ... 6=Sat. oneoff: exact dates (YYYY-MM-DD). */
+const recurring = [
+  {weekday: 2, title: "Trivia 8pm", cls: ""},
+  {weekday: 3, title: "Wine Down Wed", cls: ""},
+  {weekday: 6, title: "Mimosa Bar 12–5", cls: "gold"},
+  {weekday: 0, title: "Mimosa Bar 12–5", cls: "gold"},
+  {weekday: 1, title: "Mimosa Monday", cls: "gold"}
+];
+const oneoff = [
+  {date: "2026-11-11", title: "🇺🇸 Military Appreciation Day", cls: "red"},
+  {date: "2026-11-28", title: "Vols Watch Party", cls: "red"},
+  {date: "2026-12-31", title: "NYE at Pour", cls: "red"}
+];
+let view = new Date(); view.setDate(1);
+const $ = id => document.getElementById(id);
+function render(){
+  const y = view.getFullYear(), m = view.getMonth();
+  $("cal-title").textContent = view.toLocaleString("en-US",{month:"long",year:"numeric"});
+  const grid = $("cal-grid"); grid.innerHTML = "";
+  ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].forEach(d=>{
+    const el = document.createElement("div"); el.className="cal-dow"; el.textContent=d; grid.appendChild(el);
+  });
+  const first = new Date(y,m,1).getDay(), days = new Date(y,m+1,0).getDate();
+  const today = new Date();
+  for(let i=0;i<first;i++){const el=document.createElement("div");el.className="cal-cell";grid.appendChild(el);}
+  for(let d=1;d<=days;d++){
+    const cell = document.createElement("div"); cell.className="cal-cell";
+    const dt = new Date(y,m,d);
+    if(dt.toDateString()===today.toDateString()) cell.classList.add("today");
+    cell.innerHTML = '<span class="d">'+d+'</span>';
+    const iso = y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0");
+    oneoff.filter(e=>e.date===iso).forEach(e=>{
+      cell.innerHTML += '<span class="cal-ev '+(e.cls||"")+'">'+e.title+'</span>';
+    });
+    recurring.filter(e=>e.weekday===dt.getDay()).forEach(e=>{
+      cell.innerHTML += '<span class="cal-ev '+(e.cls||"")+'">'+e.title+'</span>';
+    });
+    grid.appendChild(cell);
+  }
+}
+$("cal-prev").onclick = ()=>{view.setMonth(view.getMonth()-1);render();};
+$("cal-next").onclick = ()=>{view.setMonth(view.getMonth()+1);render();};
+render();
+</script>
+
+</body>
+</html>
