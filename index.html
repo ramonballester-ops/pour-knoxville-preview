@@ -130,31 +130,13 @@
       <div class="tap-card"><b>🥂</b><h4>Wine &amp; Bubbles</h4><p>Reds, whites and sparkling on tap — the mimosa bar runs every weekend.</p></div>
       <div class="tap-card"><b>High-Grav</b><h4>Big Pours</h4><p>Imperial stouts, Belgian quads and other high-gravity rarities you won't find pouring anywhere else downtown.</p></div>
     </div>
-    <!-- LIVE TAP LIST SLOT ================================================
-         The Atlanta site shows a live, always-current tap list by embedding
-         iPourIt's "on tap" iframe (Beltline example):
-           <iframe src="https://ipourit.com/ontapiframe?barid=386&wrapper=true"
-                   style="width:100%;height:480px;border:0;background:#fff"
-                   loading="lazy" title="Live tap list"></iframe>
-         Knoxville runs a digital tap system but its public embed is not
-         enabled (confirmed: no Knoxville venue exists on this endpoint).
-         ACTION for John & Laura: ask iPourIt support (ipouritinc.com) for
-         the venue's "on tap iframe" link / bar id, then replace the static
-         "Recently on the wall" grid below with the iframe above.
-         ================================================================= -->
-    <h3 style="margin-top:44px;font-size:20px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)">Recently on the wall</h3>
-    <div class="pour-list">
-      <div class="pour-item"><b>LiL SLURP <span class="abv">Hazy IPA</span></b><span>NoDa Brewing Co. &middot; Charlotte, NC</span></div>
-      <div class="pour-item"><b>Back Seat IPA <span class="abv">IPA</span></b><span>Half Batch Brewing &middot; Hendersonville, TN</span></div>
-      <div class="pour-item"><b>Chimay Grande R&eacute;serve <span class="abv">9.0%</span></b><span>Bi&egrave;res de Chimay &middot; Belgium</span></div>
-      <div class="pour-item"><b>Ten FIDY <span class="abv">10.5%</span></b><span>Oskar Blues &middot; Imperial Stout</span></div>
-      <div class="pour-item"><b>Maduro Brown Ale <span class="abv">Brown</span></b><span>Cigar City Brewing &middot; Tampa, FL</span></div>
-      <div class="pour-item"><b>60 Minute IPA <span class="abv">6.0%</span></b><span>Dogfish Head &middot; IPA</span></div>
-      <div class="pour-item"><b>Franco's Mexican Lager <span class="abv">Lager</span></b><span>Clinch River Brewing &middot; Norris, TN</span></div>
-      <div class="pour-item"><b>Hippies &amp; Cowboys <span class="abv">IPA</span></b><span>Tennessee Brew Works &middot; Nashville</span></div>
-      <div class="pour-item"><b>Queen Bee <span class="abv">Sour</span></b><span>Bearded Iris Brewing &middot; Nashville</span></div>
-    </div>
-    <p style="font-size:13px;color:#8d889c;margin-top:14px">A taste of recent pours — the wall rotates daily. Follow <a href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener" style="color:var(--gold)">@pourtaproomknoxville</a> for what's tapping this week.</p>
+    <!-- Live tap list: iPourIt public feed for Pour Taproom Knoxville (bar id 125).
+         Enabled by iPourIt support Nov 18 2026 (ticket 105530). -->
+    <h3 style="margin-top:44px;font-size:20px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)">On the wall right now</h3>
+    <iframe src="https://ipourit.com/ontapiframe?barid=125&wrapper=true"
+            style="width:100%;height:600px;border:0;background:#fff"
+            loading="lazy" title="Live tap list — Pour Taproom Knoxville"></iframe>
+    <p style="font-size:13px;color:#8d889c;margin-top:14px">Live from the tap wall — this list updates automatically as kegs rotate. Follow <a href="https://www.instagram.com/pourtaproomknoxville/" target="_blank" rel="noopener" style="color:var(--gold)">@pourtaproomknoxville</a> for what's tapping this week.</p>
     <h3 style="margin-top:36px;font-size:16px;letter-spacing:2px;text-transform:uppercase">Pouring our neighbors</h3>
     <div class="brew-chips">
       <span>Clinch River &middot; Norris</span>
